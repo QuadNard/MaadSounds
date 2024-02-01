@@ -1,0 +1,12 @@
+dist
+assets
+public
+
+
+.husky
+package-lock.json
+.yarnrc.yml
+
+*.glsl
+*.vert
+*.frag
