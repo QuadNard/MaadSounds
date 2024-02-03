@@ -62,7 +62,7 @@ interface PageProps {
   
 
     return (
-        <main className='relative lg:min-h-full'>
+        <main className='relative lg:min-h-full text-white'>
         <div className='hidden lg:block h-80 overflow-hidden lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12'>
           <Image
             fill
@@ -78,7 +78,7 @@ interface PageProps {
               <p className='text-sm font-medium text-blue-600'>
                 Order successful
               </p>
-              <h1 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
+              <h1 className='mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl'>
                 Thanks for ordering
               </h1>
               {order._isPaid ? (
@@ -87,14 +87,14 @@ interface PageProps {
                   available to download below. We&apos;ve sent
                   your receipt and order details to{' '}
                   {typeof order.user !== 'string' ? (
-                    <span className='font-medium text-gray-900'>
+                    <span className='font-medium text-white'>
                       {order.user.email}
                     </span>
                   ) : null}
                   .
                 </p>
               ) : (
-                <p className='mt-2 text-base text-muted-foreground'>
+                <p className='mt-2 text-base text-white'>
                   We appreciate your order, and we&apos;re
                   currently processing it. So hang tight and
                   we&apos;ll send you confirmation very soon!
@@ -105,11 +105,11 @@ interface PageProps {
                 <div className='text-muted-foreground'>
                   Order nr.
                 </div>
-                <div className='mt-2 text-gray-900'>
+                <div className='mt-2 text-white'>
                   {order.id}
                 </div>
   
-                <ul className='mt-6 divide-y divide-gray-200 border-t border-gray-200 text-sm font-medium text-muted-foreground'>
+                <ul className='mt-6 divide-y divide-gray-200 border-t border-gray-200 text-sm text-white font-medium text-muted-foreground'>
                   {(order.products as Product[]).map(
                     (product) => {
                       const label = PRODUCT_CATEGORIES.find(
@@ -160,7 +160,7 @@ interface PageProps {
                             ) : null}
                           </div>
   
-                          <p className='flex-none font-medium text-gray-900'>
+                          <p className='flex-none font-medium text-white'>
                             {formatPrice(product.price)}
                           </p>
                         </li>
@@ -184,7 +184,7 @@ interface PageProps {
                     </p>
                   </div>
   
-                  <div className='flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900'>
+                  <div className='flex items-center justify-between border-t border-gray-200 pt-6 text-white'>
                     <p className='text-base'>Total</p>
                     <p className='text-base'>
                       {formatPrice(orderTotal + 1)}

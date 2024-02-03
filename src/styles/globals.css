@@ -15,14 +15,6 @@
   }
 }
 
-@layer base {
-  html,
-  body {
-    @apply bg-white/30 backdrop-blur-[10px]  selection:bg-primary-400/40;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-}
 
 @layer utilities {
   .focusable {
@@ -92,3 +84,14 @@ canvas {
   top: 0;
   left: 0;
 }
+
+.text-32 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.text-18 {
+  font-size: 1.125rem;
+  line-height: 1.556;
+}
+

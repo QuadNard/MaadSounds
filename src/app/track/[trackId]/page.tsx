@@ -71,7 +71,6 @@ const Page = async ({ params }: PageProps) => {
 
     return (
      <div style={{ position: 'relative', width: '100%', height: '100%' }} >
-        <Gradients />
         <div className='relative z-1'>
            <MaxWidthWrapper>
             <div className=''>

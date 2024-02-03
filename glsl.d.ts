@@ -19,3 +19,8 @@ declare module 'babel-plugin-glsl/macro';
 declare module 'gradients' {
   export function exampleFunction(): void;
 }
+
+declare module "*.mp4" {
+  const src: string;
+  export default src;
+}
