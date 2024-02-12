@@ -99,14 +99,6 @@ export const Products: CollectionConfig = {
         required: true,
         }, 
         {
-            name: 'product_files',
-            label: 'Product file (s)',
-            type: 'relationship',
-            required: false,
-            relationTo: 'product_files',
-            hasMany: false,
-        },
-        {
             name: 'approvedForSale',
             label: 'Product Status',
             type: 'select',

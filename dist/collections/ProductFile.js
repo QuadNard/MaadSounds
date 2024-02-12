@@ -46,31 +46,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductFiles = void 0;
 var addUser = function (_a) {
@@ -81,7 +56,7 @@ var addUser = function (_a) {
 var yourOwnAndPurchased = function (_a) {
     var req = _a.req;
     return __awaiter(void 0, void 0, void 0, function () {
-        var user, products, ownProductFileIds, orders, purchasedProductFileIds;
+        var user, products, orders, purchasedProductFileIds;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
@@ -98,10 +73,11 @@ var yourOwnAndPurchased = function (_a) {
                                     equals: user.id
                                 },
                             },
-                        })];
+                        })
+                        // const ownProductFileIds = products.map((prod) => prod.product_files ).flat()
+                    ];
                 case 1:
                     products = (_b.sent()).docs;
-                    ownProductFileIds = products.map(function (prod) { return prod.product_files; }).flat();
                     return [4 /*yield*/, req.payload.find({
                             collection: 'orders',
                             depth: 2,
@@ -117,14 +93,14 @@ var yourOwnAndPurchased = function (_a) {
                         return order.products.map(function (product) {
                             if (typeof product === 'string')
                                 return req.payload.logger.error('Search depth not sufficient to find purchased file IDs');
-                            return typeof product.product_files === 'string' ? product.product_files : product.product_files.id;
+                            //       return typeof product.product_files === 'string' ? product.product_files : product.product_files?.id;
                         });
                     })
                         .filter(Boolean)
                         .flat();
                     return [2 /*return*/, {
                             id: {
-                                in: __spreadArray(__spreadArray([], __read(ownProductFileIds), false), __read(purchasedProductFileIds), false)
+                            //    in:[...ownProductFileIds, ...purchasedProductFileIds]
                             }
                         }];
             }
