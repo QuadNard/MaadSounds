@@ -117,9 +117,7 @@ interface PageProps {
                           value === product.category
                       )?.label
   
-                      const downloadUrl = (
-                        product.product_files as ProductFile
-                      ).url as string
+                     // const downloadUrl = (product.product_files as ProductFile).url as string
   
                       const { image } = product.images[0]
   
@@ -151,12 +149,7 @@ interface PageProps {
                             </div>
   
                             {order._isPaid ? (
-                              <a
-                                href={downloadUrl}
-                                download={product.name}
-                                className='text-blue-600 hover:underline underline-offset-2'>
-                                Download asset
-                              </a>
+                              <a href={"/"} download={product.name} className='text-blue-600 hover:underline underline-offset-2'>Download asset</a>
                             ) : null}
                           </div>
   
