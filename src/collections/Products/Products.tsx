@@ -102,7 +102,7 @@ export const Products: CollectionConfig = {
             name: 'product_files',
             label: 'Product file (s)',
             type: 'relationship',
-            required: true,
+            required: false,
             relationTo: 'product_files',
             hasMany: false,
         },

@@ -22,13 +22,21 @@ const AddToCartButton = ({product}: {product: Product}) => {
   }, [isSuccess]);
 
   return (
-    <Button onClick={() => {
-      addItem(product);
-      setIsSuccess(true);
-    }} size='lg' className='w-full text-black' variant={'lavender'}>
-      {isSuccess ? 'Added!' : 'Add to cart'}
+    <Button  size='lg' className='w-full text-black' variant={'lavender'}>
+     /* {isSuccess ? 'Added!' : 'Add to Cart'} */
+
+     Purchasing rights still in development. 
     </Button>
   )
 }
 
 export default AddToCartButton;
+
+
+/* 
+onClick={() => {
+      addItem(product);
+      setIsSuccess(true);
+    }}
+
+*/

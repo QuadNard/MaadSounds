@@ -34,6 +34,7 @@ const Navbar = async  () => {
                             </div>
 
                             <div className='ml-auto flex items-center'>
+                               /* 
                                 <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6'>
                                     {user ? null : (
                                         <Link href='/' className={buttonVariants({
@@ -64,6 +65,7 @@ const Navbar = async  () => {
                                         <Cart />
                                     </div>
                                 </div>
+                               */
                             </div>
                         </div>
                     </div>
