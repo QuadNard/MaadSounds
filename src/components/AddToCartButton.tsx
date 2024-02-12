@@ -23,9 +23,9 @@ const AddToCartButton = ({product}: {product: Product}) => {
 
   return (
     <Button  size='lg' className='w-full text-black' variant={'lavender'}>
-     /* {isSuccess ? 'Added!' : 'Add to Cart'} */
+   
 
-     Purchasing rights still in development. 
+  <h1>Purchasing rights is in development</h1>
     </Button>
   )
 }
@@ -40,3 +40,5 @@ onClick={() => {
     }}
 
 */
+
+  /* {isSuccess ? 'Added!' : 'Add to Cart'} */
