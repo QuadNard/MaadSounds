@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MaadSounds
+> Music streaming service
 
-## Getting Started
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-First, run the development server:
+MaadSounds is a cutting-edge Ecommerce Site designed to provide users with a seamless experience of discovering, playing, and licensing music. Leveraging the power of TRPC, MaadSounds integrates various technologies to offer a feature-rich platform for both users and sellers
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![](header.png)
+
+## Installation
+
+Next
+
+```sh
+npm install 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Song Discovery and Licensing:
+  -   Users can explore a vast library of songs, play previews, and seamlessly purchase licenses for their desired tracks.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Payment Processing with Stripe:
+  -   MaadSounds employs Stripe's programmable APIs for secure and efficient payment processing, enabling global transactions and payouts for sellers.
 
-## Learn More
+* Headless CMS with Payload:
+  -  Payload, an open-source headless CMS, is utilized to manage Admin UI, local file storage, and uploads, including MP3 files, payment receipts, and images.
 
-To learn more about Next.js, take a look at the following resources:
+* MongoDB NoSQL Database:
+  -  MaadSounds relies on MongoDB for storing essential data such as user information, MP3 files, user payment history, and more. NextAuth is employed for user authentication controls.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Responsive Design:
+  -  The application is built with full responsiveness for all devices, ensuring a seamless experience across various screen sizes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* Client-side Form Validation:
+  -  React-hook-form is employed for efficient client-side form validation and handling.
 
-## Deploy on Vercel
+* Audio Playback:
+  -  Users can play songs directly on the platform, creating a dynamic and engaging user experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Playlist Management:
+  -  MaadSounds supports the creation and management of playlists, enhancing user customization options.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Advanced Player Component:
+  -  The application features an advanced player component for an immersive music playback experience.
+
+* RESTful API Routes:
+  -  POST, GET, and DELETE routes are implemented in route handlers (app/api) to manage data interactions.
+
+* Server-side Data Fetching:
+  -  Data is fetched in server React Components by directly accessing the database, ensuring optimal performance.
+
+* Real-time Component Interaction:
+  -  The project demonstrates handling relations between server and child components in a real-time environment.
+
+* Beautiful Landing and Product Pages:
+  -  MaadSounds boasts aesthetically pleasing landing and product pages for an engaging user interface.
+
+## Development setup
+
+Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+
+```sh
+npm install 
+npm run generate:types
+npm run start 
+```
+
+## Release History
+
+* 0.2.1
+    * CHANGE: Update docs (module code remains unchanged)
+* 0.2.0
+    * CHANGE: Remove `setDefaultXYZ()`
+    * ADD: Add `init()`
+* 0.1.1
+    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+* 0.1.0
+    * The first proper release
+    * CHANGE: Rename `foo()` to `bar()`
+* 0.0.1
+    * Work in progress
+
+## Meta
+
+[@YourTwitter](https://twitter.com/dbader_org) – jktulloch@gmail.com 
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+[https://github.com/yourname/github-link](https://github.com/dbader/)
+
+## Contributing
+
+1. Fork it (https://github.com/QuadNard/MaadSounds)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/yourname/yourproject/wiki
